@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import './chatScreen.dart';
+import 'screens/chatScreen.dart';
 
 final ThemeData kDefaultTheme = ThemeData(
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)

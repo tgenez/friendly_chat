@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'chat.dart';
+import '../widgets/chat.dart';
 
 class PageTest extends StatelessWidget {
   const PageTest({required this.text, Key? key}) : super(key: key);

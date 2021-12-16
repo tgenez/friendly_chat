@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:friendly_chat/pageTest.dart';
+import 'package:friendly_chat/screens/pageTest.dart';
 
 String _name = 'tgenez';
 

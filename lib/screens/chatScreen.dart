@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'chat.dart';
+import '../widgets/chat.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({
