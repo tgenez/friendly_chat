@@ -26,7 +26,7 @@ class ChatMessage extends StatelessWidget {
           if (clickable == true) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const PageTest()),
+              MaterialPageRoute(builder: (context) => PageTest(text: text)),
             );
           }
         },
