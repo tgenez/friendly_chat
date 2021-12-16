@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:friendly_chat/main.dart';
+
+import 'chat.dart';
 
 class PageTest extends StatelessWidget {
   const PageTest({Key? key}) : super(key: key);
@@ -10,16 +11,7 @@ class PageTest extends StatelessWidget {
       appBar: AppBar(
         title: const Text('PageTest'),
       ),
-      body: Center(
-        child: ElevatedButton(
-            child: const Text('Go back home'),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Home()),
-              );
-            }),
-      ),
+      body: const Chat(),
     );
   }
 }
