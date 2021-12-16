@@ -11,7 +11,7 @@ class PageTest extends StatelessWidget {
       appBar: AppBar(
         title: const Text('PageTest'),
       ),
-      body: const Chat(),
+      body: const Chat(clickable: false),
     );
   }
 }

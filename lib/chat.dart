@@ -8,10 +8,12 @@ class ChatMessage extends StatelessWidget {
   const ChatMessage({
     required this.text,
     required this.animationController,
+    required this.clickable,
     Key? key,
   }) : super(key: key);
   final String text;
   final AnimationController animationController;
+  final bool clickable;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +23,12 @@ class ChatMessage extends StatelessWidget {
       axisAlignment: 0.0,
       child: GestureDetector(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const PageTest()),
-          );
+          if (clickable == true) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const PageTest()),
+            );
+          }
         },
         child: Container(
           margin: const EdgeInsets.symmetric(vertical: 10.0),
@@ -57,8 +61,10 @@ class ChatMessage extends StatelessWidget {
 
 class Chat extends StatefulWidget {
   const Chat({
+    required this.clickable,
     Key? key,
   }) : super(key: key);
+  final bool clickable;
 
   @override
   State<Chat> createState() => _ChatState();
@@ -76,12 +82,12 @@ class _ChatState extends State<Chat> with TickerProviderStateMixin {
       _isComposing = false;
     });
     var message = ChatMessage(
-      text: text,
-      animationController: AnimationController(
-        duration: const Duration(milliseconds: 700),
-        vsync: this,
-      ),
-    );
+        text: text,
+        animationController: AnimationController(
+          duration: const Duration(milliseconds: 700),
+          vsync: this,
+        ),
+        clickable: widget.clickable);
     setState(() {
       _messages.insert(0, message);
     });

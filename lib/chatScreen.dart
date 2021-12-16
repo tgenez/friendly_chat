@@ -21,6 +21,6 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
           elevation:
               Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 4.0,
         ),
-        body: const Chat());
+        body: const Chat(clickable: true));
   }
 }
