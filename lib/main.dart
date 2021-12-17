@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:friendly_chat/screens/chatScreen.dart';
+import 'package:friendly_chat/widgets/count.dart';
 import 'package:provider/provider.dart';
 
 import 'providers/counter.dart';
@@ -71,19 +71,5 @@ class FriendlyChatApp extends StatelessWidget {
       theme: kDefaultTheme,
       home: const Home(),
     );
-  }
-}
-
-class Count extends StatelessWidget {
-  const Count({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-
-        /// Calls `context.watch` to make [Count] rebuild when [Counter] changes.
-        '${context.watch<Counter>().count}',
-        key: const Key('counterState'),
-        style: Theme.of(context).textTheme.headline4);
   }
 }
