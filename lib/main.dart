@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:friendly_chat/screens/chatScreen.dart';
 import 'package:provider/provider.dart';
 
+import 'providers/counter.dart';
+
 final ThemeData kDefaultTheme = ThemeData(
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
       .copyWith(secondary: Colors.orangeAccent[400]),
@@ -17,24 +19,6 @@ void main() {
       child: const FriendlyChatApp(),
     ),
   );
-}
-
-class Counter with ChangeNotifier, DiagnosticableTreeMixin {
-  int _count = 0;
-
-  int get count => _count;
-
-  void increment() {
-    _count++;
-    notifyListeners();
-  }
-
-  /// Makes `Counter` readable inside the devtools by listing all of its properties
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(IntProperty('count', count));
-  }
 }
 
 class Home extends StatelessWidget {
